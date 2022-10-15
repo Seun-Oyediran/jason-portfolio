@@ -10,3 +10,56 @@ export function calcTime(offset = 1) {
 
   return `${hours}:${minutes} WAT`;
 }
+
+export const projectsObject = {
+  pap: {
+    bg: '#1E1E1E',
+    firstLetter: 'P',
+    title: 'AP Admin',
+    color: '#FFFFFF',
+    secondaryColor: '#8D8D8D',
+    titleColor: '#ffffff',
+    images: [
+      '/img/pap_1.png',
+      '/img/pap_2.png',
+      '/img/pap_3.png',
+      '/img/pap_4.png',
+      '/img/pap_5.png',
+      '/img/pap_6.png',
+    ],
+  },
+  rptrd: {
+    bg: '#F5F5F5',
+    firstLetter: 'R',
+    title: 'RPTRD',
+    color: '#1B1C1E',
+    secondaryColor: '#8D8D8D',
+    titleColor: '#1E1E1E',
+    images: [
+      '/img/rptrd_1.png',
+      '/img/rptrd_2.png',
+      '/img/rptrd_3.png',
+      '/img/rptrd_4.png',
+      '/img/rptrd_5.png',
+      '/img/rptrd_6.png',
+      '/img/rptrd_7.png',
+    ],
+  },
+  tenaciti: {
+    bg: '#3366CC',
+    firstLetter: 'T',
+    title: 'ENACITI',
+    color: '#FFFFFF',
+    secondaryColor: '#8D8D8D',
+    titleColor: '#f5f5f5',
+    images: [
+      '/img/tenaciti_1.png',
+      '/img/tenaciti_2.png',
+      '/img/tenaciti_3.png',
+      '/img/tenaciti_4.png',
+      '/img/tenaciti_5.png',
+      '/img/tenaciti_6.png',
+      '/img/tenaciti_7.png',
+    ],
+  },
+};

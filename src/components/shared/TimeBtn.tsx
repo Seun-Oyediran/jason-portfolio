@@ -1,7 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { calcTime } from '../../utils';
 
-const TimeBtn = () => {
+interface IProps {
+  className?: string;
+  color?: string;
+}
+
+const TimeBtn = (props: IProps) => {
+  const { className = '', color = '#fff' } = props;
   const [time, setTime] = useState(calcTime());
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -14,19 +20,25 @@ const TimeBtn = () => {
   }, []);
 
   return (
-    <div className="app_time_btn_con">
+    <div className={`app_time_btn_con ${className}`}>
       <div className="d-flex align-items-center gap-2">
-        <p className="p">Its </p>
+        <p style={{ color }} className="p">
+          Its
+          {' '}
+        </p>
         <button
           type="button"
           className="no_style"
           onClick={() => {
             audioRef.current?.play();
           }}
+          style={{ color, borderColor: color }}
         >
           {time}
         </button>
-        <p className="p">Somewhere. I’m probably awake.</p>
+        <p className="p" style={{ color }}>
+          Somewhere. I’m probably awake.
+        </p>
       </div>
 
       <div className="d-none">
