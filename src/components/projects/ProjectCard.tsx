@@ -12,7 +12,11 @@ const ProjectCard = (props: IProps) => {
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div layoutId={layoutId} className="app_project_card_con">
+      <motion.div
+        transition={{ type: 'tween', duration: 0.1 }}
+        layoutId={layoutId}
+        className="app_project_card_con"
+      >
         <Image
           src={img}
           alt="onboarding"
