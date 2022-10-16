@@ -13,7 +13,7 @@ export function calcTime(offset = 1) {
 
 export const projectsObject = {
   pap: {
-    bg: '#1E1E1E',
+    bg: '#080808',
     firstLetter: 'P',
     title: 'AP Admin',
     color: '#FFFFFF',
@@ -27,11 +27,16 @@ export const projectsObject = {
       '/img/pap_5.png',
       '/img/pap_6.png',
     ],
+    role: 'Interface designer',
+    developedBy: 'Tobiloba',
+    client: 'PAP Inc. (UK)',
+    date: 'October ‘22',
+    link: '',
   },
   rptrd: {
     bg: '#F5F5F5',
     firstLetter: 'R',
-    title: 'RPTRD',
+    title: 'PTRD',
     color: '#1B1C1E',
     secondaryColor: '#8D8D8D',
     titleColor: '#1E1E1E',
@@ -44,6 +49,11 @@ export const projectsObject = {
       '/img/rptrd_6.png',
       '/img/rptrd_7.png',
     ],
+    role: 'Interface designer',
+    developedBy: 'Wale Shopeyin',
+    client: 'RPTRD (UK)',
+    date: 'October ‘22',
+    link: 'https://www.rptrdsols.io/',
   },
   tenaciti: {
     bg: '#3366CC',
@@ -61,5 +71,10 @@ export const projectsObject = {
       '/img/tenaciti_6.png',
       '/img/tenaciti_7.png',
     ],
+    role: 'Interface designer',
+    developedBy: 'Waves Tech',
+    client: 'Waves Tech (US)',
+    date: 'October ‘22',
+    link: '',
   },
 };

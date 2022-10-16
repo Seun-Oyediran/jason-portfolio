@@ -5,7 +5,7 @@
 }
 
 :root {
-  --background-black: #141414;
+  --background-black: #080808;
   --background-white: #f1f1f1;
   --primary-font-dark: #1b1c1e;
   --primary-font-light: #ffffff;
@@ -73,7 +73,7 @@ p {
   justify-content: space-between;
   position: relative;
   z-index: 9;
-  gap: 2rem;
+  gap: 1rem;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -253,6 +253,49 @@ p {
   line-height: 62px;
 }
 
+.project_details_grid_con {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.project_details_item h4,
+.project_details_item p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.project_details_item p {
+  color: #969696;
+}
+
+.project_details_item.rptrd h4 {
+  color: #1b1c1e;
+}
+
+.visit_site_link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.visit_site_link:hover {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.visit_site_link.rptrd,
+.visit_site_link.rptrd:hover {
+  color: #1b1c1e;
+}
+
 /* ===================================
   HOME SCREEN ENDS HERE
 ====================================== */
@@ -300,8 +343,8 @@ p {
 }
 
 .app_project_big_image {
-  width: 711px !important;
-  height: 362px !important;
+  width: 701px !important;
+  height: 342px !important;
 }
 
 .app_project_big_image img {

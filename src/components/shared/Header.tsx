@@ -10,7 +10,7 @@ const Header = (props: IProps) => {
   const { className = '', color = '#fff', secondaryColor = '#fff' } = props;
 
   return (
-    <div className={`app_header_con p-5 pb-4 ${className}`}>
+    <div className={`app_header_con px-5 py-4 ${className}`}>
       <div className="d-flex justify-content-between main_content">
         <div>
           <div className="d-flex align-items-center">

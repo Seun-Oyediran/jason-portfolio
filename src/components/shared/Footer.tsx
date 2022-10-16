@@ -1,31 +1,86 @@
 import React from 'react';
 // import queries from '../../services/queries/spotify';
 import { Spotify } from '../../svg';
+import RenderIf from './RenderIf';
 
 interface IProps {
   className?: string;
   color?: string;
   secondaryColor?: string;
+  role?: string;
+  developedBy?: string;
+  client?: string;
+  date?: string;
+  project?: boolean;
+  link?: string;
 }
 
+interface IProjectDetails {
+  topic?: string;
+  value?: string;
+  className?: string;
+}
+
+const ProjectDetails = (props: IProjectDetails) => {
+  const { topic, value, className = '' } = props;
+
+  return (
+    <div className={`project_details_item ${className}`}>
+      <h4>{topic}</h4>
+      <p>{value}</p>
+    </div>
+  );
+};
+
 const Footer = (props: IProps) => {
-  const { className = '', color = '#fff', secondaryColor = '#fff' } = props;
+  const {
+    className = '',
+    color = '#fff',
+    secondaryColor = '#fff',
+    client,
+    date,
+    developedBy,
+    role,
+    project = false,
+    link,
+  } = props;
   // const { data } = queries.read();
 
   return (
     <div className={`app_footer_con ${className}`}>
       <div className="top px-5">
-        <div className="d-flex justify-content-between">
+        <RenderIf condition={project && !!link}>
+          <div className="d-flex justify-content-center mt-4">
+            <a
+              target="_blank"
+              href={link}
+              className={`visit_site_link ${className}`}
+              rel="noreferrer"
+            >
+              Visit Site
+            </a>
+          </div>
+        </RenderIf>
+        <div className="d-flex justify-content-between gap-3 mt-3">
           <p className="first p" style={{ color: secondaryColor }}>
             Should have been a website with loads of animations, Showcasing mostly the devs skills,
             buttt. the budget didn’t match so you get this.
           </p>
 
+          <RenderIf condition={project}>
+            <div className="project_details_grid_con">
+              <ProjectDetails topic="Role" value={role} className={className} />
+              <ProjectDetails topic="Developed by" value={developedBy} className={className} />
+              <ProjectDetails topic="Client" value={client} className={className} />
+              <ProjectDetails topic="Date" value={date} className={className} />
+            </div>
+          </RenderIf>
+
           <p className="last p" style={{ color: secondaryColor }}>
             Schedule opening up in October, would you like to collaborate on a project? We
             {' '}
             <br />
-            <a href="/" className="no_style">
+            <a href="/" className="no_style" style={{ color: secondaryColor }}>
               Should Talk!
             </a>
           </p>

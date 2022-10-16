@@ -170,6 +170,12 @@ const Project = () => {
                   className={id}
                   color={pageData.color}
                   secondaryColor={pageData.secondaryColor}
+                  client={pageData.client}
+                  date={pageData.date}
+                  developedBy={pageData.developedBy}
+                  role={pageData.role}
+                  project
+                  link={pageData.link}
                 />
               </div>
             </motion.div>
