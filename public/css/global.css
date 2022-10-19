@@ -356,3 +356,68 @@ p {
 /* ===================================
   PROJECT MODAL ENDS HERE
 ====================================== */
+
+/* ===================================
+  WORKSHOP STARTS HERE
+====================================== */
+.workshop_item_details h5,
+.workshop_item_details p,
+.workshop_why_con p,
+.workshop_why_con h5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1b1c1e;
+}
+
+.workshop_item_details p,
+.workshop_why_con p {
+  color: #8d8d8d;
+  margin-top: 2px;
+}
+
+.workshop_why_con,
+.workshop_item_details {
+  max-width: 278px;
+  width: 100%;
+}
+
+.workshop_image_con {
+  flex: 1;
+}
+
+.big_hexagon_con {
+  width: 215px;
+  height: 87px;
+  position: relative;
+  overflow: hidden;
+}
+
+.big_hexagon_con .polygon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  width: 100%;
+}
+
+.big_hexagon_con .gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  width: 100%;
+  object-fit: cover;
+}
+
+.small_polygon_con {
+  width: 215px;
+}
+
+/* ===================================
+  WORKSHOP ENDS HERE
+====================================== */

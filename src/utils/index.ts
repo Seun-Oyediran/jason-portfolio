@@ -11,6 +11,20 @@ export function calcTime(offset = 1) {
   return `${hours}:${minutes} WAT`;
 }
 
+export const projects = [
+  { id: 1, name: 'pap', image: '/img/pap_1.png' },
+  { id: 2, name: 'rptrd', image: '/img/project_2.png' },
+  { id: 3, name: 'tenaciti', image: '/img/project_3.png' },
+];
+
+export const workshop = [
+  { id: 1, name: 'apple', image: '/img/workshop_1.png' },
+  { id: 2, name: 'windows', image: '/img/workshop_2.png' },
+  { id: 3, name: 'rptrd', image: '/img/workshop_3.png' },
+  { id: 4, name: 'rptrd', image: '/img/workshop_4.png' },
+  { id: 5, name: 'five', image: '/img/workshop_5.png' },
+];
+
 export const projectsObject = {
   pap: {
     bg: '#080808',
@@ -76,5 +90,23 @@ export const projectsObject = {
     client: 'Waves Tech (US)',
     date: 'October ‘22',
     link: '',
+  },
+};
+
+export const workshopObject = {
+  apple: {
+    image: '/img/big_workshop_1.png',
+    why: 'Working on a personal project with a couple designer and dev friends of mine that includes all the best modals ever created. This being the very first one to be used on the site. fin.',
+    footerImg: '',
+  },
+  windows: {
+    image: '/img/big_workshop_2.png',
+    why: 'Just wanted to. Still on my modals project. The fully interactive modal is in the works. Fin',
+    footerImg: '',
+  },
+  rptrd: {
+    image: '/img/big_workshop_3.png',
+    why: 'Working on a personal project with a couple designer and dev friends of mine that includes all the best modals ever created. This being the very first one to be used on the site. fin.',
+    footerImg: '/img/rptrd_footer.svg',
   },
 };

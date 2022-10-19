@@ -3,6 +3,7 @@ import React from 'react';
 import { Spotify } from '../../svg';
 import RenderIf from './RenderIf';
 
+const DEFAULT_TEXT = 'Should have been a website with loads of animations, Showcasing mostly the devs skills, buttt. the budget didn’t match so you get this.';
 interface IProps {
   className?: string;
   color?: string;
@@ -13,6 +14,7 @@ interface IProps {
   date?: string;
   project?: boolean;
   link?: string;
+  leftText?: string;
 }
 
 interface IProjectDetails {
@@ -43,6 +45,7 @@ const Footer = (props: IProps) => {
     role,
     project = false,
     link,
+    leftText = DEFAULT_TEXT,
   } = props;
   // const { data } = queries.read();
 
@@ -63,8 +66,7 @@ const Footer = (props: IProps) => {
         </RenderIf>
         <div className="d-flex justify-content-between gap-3 mt-3">
           <p className="first p" style={{ color: secondaryColor }}>
-            Should have been a website with loads of animations, Showcasing mostly the devs skills,
-            buttt. the budget didn’t match so you get this.
+            {leftText}
           </p>
 
           <RenderIf condition={project}>

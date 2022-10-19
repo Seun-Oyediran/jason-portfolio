@@ -6,6 +6,7 @@ import Link from 'next/link';
 import {
   Footer, Header, ProjectCard, TimeButton,
 } from '../components';
+import { projects, workshop } from '../utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,35 +76,32 @@ const Home: NextPage = () => {
         <div>
           <div className="d-flex">
             <div ref={boxRef} className="app_projects_con d-flex gap-3 align-items-center">
-              <h3 className={active === 'projects' ? 'big' : ''}>Projects (3)</h3>
+              <h3 className={active === 'projects' ? 'big' : ''}>
+                Projects (
+                {projects.length}
+                )
+              </h3>
 
-              <Link href="/project/pap">
-                <a href="/project/pap">
-                  <ProjectCard img="/img/pap_1.png" layoutId="project_layout_pap" />
-                </a>
-              </Link>
-
-              <Link href="/project/rptrd">
-                <a href="/project/rptrd">
-                  <ProjectCard img="/img/project_2.png" layoutId="project_layout_rptrd" />
-                </a>
-              </Link>
-
-              <Link href="/project/tenaciti">
-                <a href="/project/tenaciti">
-                  <ProjectCard img="/img/project_3.png" layoutId="project_layout_tenaciti" />
-                </a>
-              </Link>
+              {projects.map((item) => (
+                <Link key={item.id} href={`/project/${item.name}`}>
+                  <a href={`/project/${item.name}`}>
+                    <ProjectCard img={item.image} layoutId={`project_layout_${item.name}`} />
+                  </a>
+                </Link>
+              ))}
 
               <h3 className={active === 'workshop' ? 'big' : ''} ref={workshopRef}>
-                Workshop (10)
+                Workshop (
+                {workshop.length}
+                )
               </h3>
-              <ProjectCard img="/img/project_1.png" />
-              <ProjectCard img="/img/project_2.png" />
-              <ProjectCard img="/img/project_3.png" />
-              <ProjectCard img="/img/project_1.png" />
-              <ProjectCard img="/img/project_2.png" />
-              <ProjectCard img="/img/project_3.png" />
+              {workshop.map((item) => (
+                <Link key={item.id} href={`/workshop/${item.name}`}>
+                  <a href={`/workshop/${item.name}`}>
+                    <ProjectCard img={item.image} layoutId={`project_workshop_${item.name}`} />
+                  </a>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
