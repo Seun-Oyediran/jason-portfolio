@@ -421,3 +421,64 @@ p {
 /* ===================================
   WORKSHOP ENDS HERE
 ====================================== */
+
+/* ===================================
+  ABOUT PAGE STARTS HERE
+====================================== */
+.about_page_first_content {
+  max-width: 368px;
+  width: 100%;
+}
+
+.about_page_first_content h2 {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 98px;
+  letter-spacing: -0.1em;
+  color: #ffffff;
+}
+
+.about_page_first_content h5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.about_page_second_content {
+  max-width: 490px;
+  width: 100%;
+}
+
+.about_page_second_content h6 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.about_page_second_content p {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -0.1em;
+  color: #ffffff;
+}
+
+.about_page_third_content {
+  max-width: 286px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about_page_third_content h6 {
+  text-align: right;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+/* ===================================
+  ABOUT PAGE ENDS HERE
+====================================== */

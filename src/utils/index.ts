@@ -110,3 +110,9 @@ export const workshopObject = {
     footerImg: '/img/rptrd_footer.svg',
   },
 };
+
+export const aboutMovies = [
+  { id: 1, image: '/img/movies_1.svg', name: 'Blade Runner 2049' },
+  { id: 2, image: '/img/movies_2.svg', name: 'Far Cry' },
+  { id: 3, image: '/img/movies_3.png', name: 'Blade Runner 2049' },
+];
