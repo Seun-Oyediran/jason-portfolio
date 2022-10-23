@@ -76,7 +76,7 @@ const About = () => {
                         layout="responsive"
                         width={286}
                         height={382}
-                        className="w-100"
+                        className="w-100 bg-white"
                       />
                     </motion.div>
                   );
