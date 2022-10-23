@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
 import { Footer, Header, TimeButton } from '../components';
 import { aboutMovies } from '../utils';
 
@@ -68,7 +69,15 @@ const About = () => {
                       className="img-con my-3"
                       key={item.id}
                     >
-                      <img src={item.image} alt="movie" className="w-100" />
+                      <Image
+                        src={item.image}
+                        alt="movie"
+                        loading="lazy"
+                        layout="responsive"
+                        width={286}
+                        height={382}
+                        className="w-100"
+                      />
                     </motion.div>
                   );
                 }
