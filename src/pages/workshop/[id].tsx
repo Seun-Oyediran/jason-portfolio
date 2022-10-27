@@ -7,6 +7,7 @@ import {
 } from '../../components';
 import { CloseBtn } from '../../components/buttons';
 import { workshopObject } from '../../utils';
+import { Polygon } from '../../svg';
 
 type IData = ReturnType<() => typeof workshopObject.apple>;
 type ID = keyof ReturnType<() => typeof workshopObject>;
@@ -97,7 +98,7 @@ const Workshop = () => {
                       </div>
                     </div>
                     <div className="small_polygon_con d-flex justify-content-center mt-3">
-                      <img src="/img/green_polygon.svg" alt="polygon" />
+                      <Polygon />
                     </div>
                   </div>
 

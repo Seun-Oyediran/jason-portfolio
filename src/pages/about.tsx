@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { Footer, Header, TimeButton } from '../components';
+import { BottomFooter, Header, TimeButton } from '../components';
 import { aboutMovies } from '../utils';
+import { AboutFooter } from '../components/about';
 
 const INTERVAL = 5000;
 
@@ -89,8 +90,9 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div>
-          <Footer />
+        <div className="mt-2">
+          <AboutFooter />
+          <BottomFooter />
         </div>
         {/* <WelcomeScreen /> */}
       </div>

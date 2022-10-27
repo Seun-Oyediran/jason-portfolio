@@ -479,6 +479,57 @@ p {
   color: #ffffff;
 }
 
+.about_fouter_con .social_link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.about_fouter_con .social_link:hover {
+  text-decoration: underline;
+}
+
+.about_fouter_con .independent_text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #f7f7f7;
+}
+
+.about_footer_middle_con h6 {
+  border-bottom: 1px solid #ffffff;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+.about_footer_middle_con h6 a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.05em;
+  color: #8d8d8d;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.about_footer_middle_con h5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.about_footer_right_con h5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  color: #f7f7f7;
+}
+
 /* ===================================
   ABOUT PAGE ENDS HERE
 ====================================== */
