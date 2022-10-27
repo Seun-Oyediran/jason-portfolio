@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUp } from '../../svg';
 
 const socialLinks = [
-  { id: 1, name: 'LINKEDIN', href: '/' },
+  { id: 1, name: 'LINKEDIN', href: 'https://www.linkedin.com/in/jason-udi-5157a5203/' },
   { id: 2, name: 'EMAIL', href: 'mailto:Jeriahudi@gmail.com' },
   { id: 3, name: 'DRIBBLE', href: 'https://dribbble.com/Jasoncaine/about' },
   { id: 4, name: 'TWITTER', href: 'https://twitter.com/Gravetwit' },
