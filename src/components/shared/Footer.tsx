@@ -1,4 +1,5 @@
 import React from 'react';
+import queries from '../../services/queries/spotify';
 // import queries from '../../services/queries/spotify';
 import { Spotify } from '../../svg';
 import RenderIf from './RenderIf';
@@ -47,7 +48,7 @@ const Footer = (props: IProps) => {
     link,
     leftText = DEFAULT_TEXT,
   } = props;
-  // const { data } = queries.read();
+  const { data } = queries.read();
 
   return (
     <div className={`app_footer_con ${className}`}>
@@ -92,9 +93,12 @@ const Footer = (props: IProps) => {
         <div className="d-flex justify-content-between">
           <div className="d-flex gap-2 spotify align-items-center">
             <Spotify />
-            {/* <p style={{ color }}>
-              {data?.item?.name} -{data?.item?.artists[0]?.name}
-            </p> */}
+            <p style={{ color }}>
+              {data?.item?.name}
+              {' '}
+              -
+              {data?.item?.artists[0]?.name}
+            </p>
           </div>
           <div className="d-flex gap-1">
             <a style={{ color }} href="/">

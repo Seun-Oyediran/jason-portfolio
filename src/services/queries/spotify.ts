@@ -1,27 +1,59 @@
 import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 import spotify from '../queryKeys/spotify';
 
+const ACCESS_KEY = 'ACCESS_KEY';
+const clientId = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID || '';
+const clientSecret = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET || '';
+const refreshToken = process.env.NEXT_PUBLIC_SPOTIFY_REFRESH_TOKEN || '';
+
 const getData = async () => {
-  const datajson = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
-    method: 'GET',
+  const accessKey = localStorage.getItem(ACCESS_KEY);
+
+  const res = await axios.get('https://api.spotify.com/v1/me/player/currently-playing', {
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      Authorization:
-        'Bearer BQDSOdLX5BSCG0li66KfDKOLOOChsjYfLSZg57xA8VvizUSpKW_oq89qKzWn1OcnU_cp1xxHlpaAdGzSh0etlvkqXqSn89q1jo6s2ufefRXVTJH6VWVXqRqE2yhC2se0y-1eHyh7uges_rP4Dr-1a-XiuYcK9VAQHsDl5ambCEQ0FIEEBXFGdJ0xXYtjbQG2eoOHB7ge',
+      Authorization: `Bearer ${accessKey}`,
     },
   });
 
-  const data = await datajson.json();
+  return res.data;
+};
 
-  return data;
+const authOptions = {
+  url: 'https://accounts.spotify.com/api/token',
+};
+
+const getAccessToken = async () => {
+  const params = new URLSearchParams();
+
+  params.append('grant_type', 'refresh_token');
+  params.append('refresh_token', refreshToken);
+  const response = await fetch(authOptions.url, {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: params,
+  });
+
+  const res = await response.json();
+
+  localStorage.setItem(ACCESS_KEY, res?.access_token);
 };
 
 const read = (options = {}) => {
+  const accessKey = localStorage.getItem(ACCESS_KEY);
+  if (!accessKey) {
+    getAccessToken();
+  }
   const response = useQuery([spotify.read], getData, {
     ...options,
     onSuccess: () => {},
-    onError: () => {},
+    onError: () => {
+      getAccessToken();
+    },
+    refetchInterval: localStorage.getItem(ACCESS_KEY) ? false : 3000,
   });
 
   return response;
