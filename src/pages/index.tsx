@@ -7,6 +7,7 @@ import {
   Footer, Header, ProjectCard, TimeButton,
 } from '../components';
 import { projects, workshop } from '../utils';
+import { MobileHome } from '../components/shared/mobile';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,63 +67,57 @@ const Home: NextPage = () => {
 
   return (
     <SafeHydrate>
-      <div ref={triggerRef} className="app_home_page">
-        <div>
-          <Header />
-          <div className="d-flex justify-content-center">
-            <TimeButton />
-          </div>
-        </div>
-        <div>
-          <div className="d-flex">
-            <div ref={boxRef} className="app_projects_con d-flex gap-3 align-items-center">
-              <h3 className={active === 'projects' ? 'big' : ''}>
-                Projects (
-                {projects.length}
-                )
-              </h3>
-
-              {projects.map((item) => (
-                <Link key={item.id} href={`/project/${item.name}`}>
-                  <a href={`/project/${item.name}`}>
-                    <ProjectCard img={item.image} layoutId={`project_layout_${item.name}`} />
-                  </a>
-                </Link>
-              ))}
-
-              <h3 className={active === 'workshop' ? 'big' : ''} ref={workshopRef}>
-                Workshop (
-                {workshop.length}
-                )
-              </h3>
-              {workshop.map((item) => (
-                <Link key={item.id} href={`/workshop/${item.name}`}>
-                  <a href={`/workshop/${item.name}`}>
-                    <ProjectCard img={item.image} layoutId={`project_workshop_${item.name}`} />
-                  </a>
-                </Link>
-              ))}
+      <div className="d-none d-md-block">
+        <div ref={triggerRef} className="app_home_page">
+          <div>
+            <Header />
+            <div className="d-flex justify-content-center">
+              <TimeButton />
             </div>
           </div>
+          <div className="">
+            <div className="d-flex">
+              <div ref={boxRef} className="app_projects_con d-flex gap-3 align-items-center">
+                <h3 className={active === 'projects' ? 'big' : ''}>
+                  Projects (
+                  {projects.length}
+                  )
+                </h3>
+
+                {projects.map((item) => (
+                  <Link key={item.id} href={`/project/${item.name}`}>
+                    <a href={`/project/${item.name}`}>
+                      <ProjectCard img={item.image} layoutId={`project_layout_${item.name}`} />
+                    </a>
+                  </Link>
+                ))}
+
+                <h3 className={active === 'workshop' ? 'big' : ''} ref={workshopRef}>
+                  Workshop (
+                  {workshop.length}
+                  )
+                </h3>
+                {workshop.map((item) => (
+                  <Link key={item.id} href={`/workshop/${item.name}`}>
+                    <a href={`/workshop/${item.name}`}>
+                      <ProjectCard img={item.image} layoutId={`project_workshop_${item.name}`} />
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <Footer />
+          </div>
+          {/* <WelcomeScreen /> */}
         </div>
-        <div>
-          <Footer />
-        </div>
-        {/* <WelcomeScreen /> */}
       </div>
 
-      {/* <Modal animation={false} fullscreen show={show}>
-        <div className="relative_modal_con">
-          <motion.div className="modal_bg" layoutId={modalData.layoutId} />
-          <ProjectModal
-            handleClose={() => {
-              setShow(false);
-              setModalData({ layoutId: '' });
-            }}
-            layoutId={modalData.layoutId}
-          />
-        </div>
-      </Modal> */}
+      <div className="d-md-none">
+        <MobileHome />
+      </div>
     </SafeHydrate>
   );
 };
