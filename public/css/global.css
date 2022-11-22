@@ -104,6 +104,32 @@ p {
   color: #ffffff;
 }
 
+.app_header_con.mobile .top_content {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.app_header_con.mobile h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 5px;
+}
+
+.app_header_con.mobile h4.home {
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.app_header_con.mobile p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.app_header_con.mobile p.developer {
+  text-align: end;
+}
+
 .app_header_con .main_content p {
   color: #f7f7f7;
 }
@@ -161,6 +187,17 @@ p {
   border-top: 1px solid #ffffff;
   padding-top: 19px;
   padding-bottom: 36px;
+}
+
+.app_footer_con.mobile .bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 19px;
+}
+
+.app_footer_con.mobile .bottom .copyright {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .app_footer_con .bottom .spotify p {
@@ -530,6 +567,44 @@ p {
   color: #f7f7f7;
 }
 
+.cursor_pointer {
+  cursor: pointer !important;
+}
 /* ===================================
   ABOUT PAGE ENDS HERE
 ====================================== */
+
+.app_home_button_con h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+  letter-spacing: -0.1em;
+  color: #909090;
+  transition: all 0.3s ease;
+}
+
+.app_home_button_con h6 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.1em;
+  color: #909090;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.app_home_button_con.active h2 {
+  color: #f7f7f7;
+}
+
+.app_mobile_footer_item p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f7f7f7;
+  max-width: 244px;
+}
+
+.footer_item_border_top {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}

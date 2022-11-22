@@ -20,7 +20,7 @@ const TimeBtn = (props: IProps) => {
   }, []);
 
   return (
-    <div className={`app_time_btn_con ${className}`}>
+    <div className={`app_time_btn_con ${className} px-3 px-lg-5`}>
       <div className="d-flex align-items-center gap-2">
         <p style={{ color }} className="p">
           Its
