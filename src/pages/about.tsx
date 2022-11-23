@@ -34,9 +34,9 @@ const About = () => {
             <TimeButton />
           </div>
         </div>
-        <div className="px-5">
-          <div className="d-flex justify-content-between gap-3">
-            <div className="about_page_first_content">
+        <div className="px-md-5 px-3">
+          <div className="d-md-flex justify-content-between gap-3">
+            <div className="about_page_first_content mt-5">
               <h2>
                 About
                 <br />
@@ -50,7 +50,7 @@ const About = () => {
               </h5>
             </div>
 
-            <div className="about_page_second_content align-self-center">
+            <div className="about_page_second_content align-self-center mt-5">
               <h6>Migwo</h6>
               <p className="mt-3">
                 That means uh, Good morning, you’ve seen my choice in music, other stuff I’m
@@ -58,7 +58,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="about_page_third_content">
+            <div className="about_page_third_content mt-5 d-flex flex-column justify-content-center">
               <h6>What I love to Watch</h6>
 
               {aboutMovies.map((item, index) => {

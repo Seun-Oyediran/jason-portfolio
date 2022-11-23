@@ -2,13 +2,14 @@ import React from 'react';
 
 interface IProps {
   text?: string;
+  className?: string;
 }
 
 const FooterItem = (props: IProps) => {
-  const { text } = props;
+  const { text, className = '' } = props;
 
   return (
-    <div className="app_mobile_footer_item py-3">
+    <div className={`app_mobile_footer_item py-3 ${className}`}>
       <div className="d-flex justify-content-between gap-3 align-items-center">
         <p>{text}</p>
 
