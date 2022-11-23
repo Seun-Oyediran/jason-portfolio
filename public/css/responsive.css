@@ -34,6 +34,21 @@
   .app_time_btn_con p {
     font-size: 12px;
   }
+
+  .about_page_first_content,
+  .about_page_second_content {
+    max-width: 100%;
+  }
+
+  .about_page_first_content h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .about_page_third_content {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -41,6 +56,10 @@
 
 /* col-sm */
 @media (max-width: 575.98px) {
+  .about_page_second_content p {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 /* col-sm */

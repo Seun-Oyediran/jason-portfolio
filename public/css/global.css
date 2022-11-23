@@ -608,3 +608,17 @@ p {
 .footer_item_border_top {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+.about_footer_item p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.about_fouter_con .social_link.mobile {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.bordered_footer_item {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
