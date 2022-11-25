@@ -15,7 +15,7 @@ const MobileAboutFooter = () => {
       <div className="about_footer_right_con px-3 mb-5">
         <div className="d-flex flex-column align-items-center">
           <div className="big_hexagon_con mt-4 mb-3">
-            <img src="/img/polygon.svg" className="polygon" alt="polygon" />
+            <img src="/img/dark_polygon.svg" className="polygon" alt="polygon" />
 
             <iframe
               src="https://giphy.com/embed/5hrTWkvO6dFodC8hnl"

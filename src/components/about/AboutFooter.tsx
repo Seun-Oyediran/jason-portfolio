@@ -80,7 +80,7 @@ const AboutFooter = () => {
 
           <div className="about_footer_right_con">
             <div className="big_hexagon_con mt-4">
-              <img src="/img/polygon.svg" className="polygon" alt="polygon" />
+              <img src="/img/dark_polygon.svg" className="polygon" alt="polygon" />
 
               <iframe
                 src="https://giphy.com/embed/5hrTWkvO6dFodC8hnl"
