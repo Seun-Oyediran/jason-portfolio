@@ -33,9 +33,7 @@ const AboutFooter = () => {
             </div>
             <div className="mt-3">
               <h5 className="independent_text">
-                Independent designer
-                {' '}
-                <br />
+                Independent designer <br />
                 Available Nov. 2022
               </h5>
             </div>
@@ -51,27 +49,21 @@ const AboutFooter = () => {
             <div className="d-flex gap-4 mb-4">
               <div>
                 <h5>
-                  Designed by
-                  {' '}
-                  <br />
+                  Designed by <br />
                   Jason Udi
                 </h5>
               </div>
 
               <div>
                 <h5>
-                  Developed by
-                  {' '}
-                  <br />
+                  Developed by <br />
                   Seun Oyediran
                 </h5>
               </div>
 
               <div>
                 <h5>
-                  Typeface
-                  {' '}
-                  <br />
+                  Typeface <br />
                   DM Sans
                 </h5>
               </div>
@@ -80,7 +72,7 @@ const AboutFooter = () => {
 
           <div className="about_footer_right_con">
             <div className="big_hexagon_con mt-4">
-              <img src="/img/polygon.svg" className="polygon" alt="polygon" />
+              <img src="/img/dark_polygon.svg" className="polygon" alt="polygon" />
 
               <iframe
                 src="https://giphy.com/embed/5hrTWkvO6dFodC8hnl"
@@ -93,9 +85,7 @@ const AboutFooter = () => {
             </div>
 
             <h5 className="mt-3">
-              All rights reserved
-              {' '}
-              <br />
+              All rights reserved <br />
               Jason Udi 2022 c
             </h5>
           </div>
