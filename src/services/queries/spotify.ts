@@ -24,22 +24,27 @@ const authOptions = {
 };
 
 const getAccessToken = async () => {
-  const params = new URLSearchParams();
+  try {
+    const params = new URLSearchParams();
 
-  params.append('grant_type', 'refresh_token');
-  params.append('refresh_token', refreshToken);
-  const response = await fetch(authOptions.url, {
-    method: 'POST',
-    headers: {
-      Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: params,
-  });
+    params.append('grant_type', 'refresh_token');
+    params.append('refresh_token', refreshToken);
+    const response = await fetch(authOptions.url, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: params,
+    });
 
-  const res = await response.json();
+    const res = await response.json();
 
-  localStorage.setItem(ACCESS_KEY, res?.access_token);
+    localStorage.setItem(ACCESS_KEY, res?.access_token);
+  } catch (error) {
+    // eslint-disable-next-line
+    console.log(error);
+  }
 };
 
 const read = (options = {}) => {
@@ -53,7 +58,7 @@ const read = (options = {}) => {
     onError: () => {
       getAccessToken();
     },
-    refetchInterval: localStorage.getItem(ACCESS_KEY) ? false : 3000,
+    refetchInterval: 5000,
   });
 
   return response;

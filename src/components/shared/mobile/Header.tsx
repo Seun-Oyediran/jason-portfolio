@@ -6,16 +6,19 @@ interface IProps {
   className?: string;
   color?: string;
   secondaryColor?: string;
+  borderColor?: string;
 }
 
 const Header = (props: IProps) => {
-  const { className = '', color = '#fff', secondaryColor = '#F7F7F7' } = props;
+  const {
+    className = '', color = '#fff', secondaryColor = '#F7F7F7', borderColor,
+  } = props;
   return (
     <div className={`app_header_con mobile py-4 ${className}`}>
-      <div className="top_content d-flex justify-content-between px-3 ">
+      <div className="top_content d-flex justify-content-between px-3 " style={{ borderColor }}>
         <Link href={routes.home.path}>
           <a href={routes.home.path} className="no_style cursor_pointer">
-            <h4 className="home" style={{ color }}>
+            <h4 className="home" style={{ color, borderColor }}>
               Udi.Home
             </h4>
           </a>

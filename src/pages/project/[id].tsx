@@ -7,6 +7,7 @@ import { Footer, Header, TimeButton } from '../../components';
 import { CloseBtn } from '../../components/buttons';
 import ProjectImage from '../../components/projects/ProjectImage';
 import { projectsObject } from '../../utils';
+import { MobileProjects } from '../../components/projects/mobile';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,7 +87,7 @@ const Project = () => {
             layoutId={`project_layout_${id}`}
             style={{ background: pageData.bg }}
           />
-          <div className="relative_modal_con">
+          <div className="relative_modal_con d-none d-md-block">
             <motion.div ref={triggerrRef} className="app_home_page modal">
               <div>
                 <Header
@@ -98,7 +99,7 @@ const Project = () => {
                   <TimeButton className={id} color={pageData.color} />
                 </div>
               </div>
-              <div>
+              <div className="">
                 <div className="d-flex justify-content-center mb-4">
                   <CloseBtn
                     handleClick={() => {
@@ -165,6 +166,7 @@ const Project = () => {
                   </motion.div>
                 </motion.div>
               </div>
+
               <div>
                 <Footer
                   className={id}
@@ -176,6 +178,40 @@ const Project = () => {
                   role={pageData.role}
                   project
                   link={pageData.link}
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="relative_modal_con d-md-none">
+            <motion.div className="app_home_page modal">
+              <div>
+                <Header
+                  className={id}
+                  color={pageData.color}
+                  secondaryColor={pageData.secondaryColor}
+                  borderColor={pageData?.footerBorder}
+                />
+                <div className="d-flex justify-content-center">
+                  <TimeButton className={id} color={pageData.color} />
+                </div>
+              </div>
+
+              <div className="">
+                <MobileProjects data={pageData} />
+              </div>
+              <div>
+                <Footer
+                  className={id}
+                  color={pageData.color}
+                  secondaryColor={pageData.secondaryColor}
+                  client={pageData.client}
+                  date={pageData.date}
+                  developedBy={pageData.developedBy}
+                  role={pageData.role}
+                  project
+                  link={pageData.link}
+                  borderColor={pageData?.footerBorder}
                 />
               </div>
             </motion.div>
