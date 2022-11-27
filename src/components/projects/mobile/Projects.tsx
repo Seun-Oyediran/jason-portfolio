@@ -1,7 +1,11 @@
+import { useRouter } from 'next/router';
 import React from 'react';
+import routes from '../../../routes';
 import { ArrowRight } from '../../../svg';
 import { projectsObject } from '../../../utils';
 import { FooterItem } from '../../shared/mobile';
+
+const projectsOptions = ['pap', 'rptrd', 'tenaciti'];
 
 type IData = ReturnType<() => typeof projectsObject.pap>;
 
@@ -11,6 +15,22 @@ interface IProps {
 
 const Projects = (props: IProps) => {
   const { data } = props;
+  const router = useRouter();
+
+  const handleNext = () => {
+    const id = router.query?.id as string;
+    let index = projectsOptions.indexOf(id);
+
+    if (index < 0) return;
+
+    index += 1;
+
+    if (index > projectsOptions.length - 1) {
+      index = 0;
+    }
+
+    router.push(`${routes.project.path}/${projectsOptions[index]}`);
+  };
 
   return (
     <div className="app_projects_mobile_layout mt-5">
@@ -73,6 +93,9 @@ const Projects = (props: IProps) => {
                 backgroundColor: data?.mobileBtnBg,
               }}
               type="button"
+              onClick={() => {
+                router.back();
+              }}
             >
               Back
             </button>
@@ -86,6 +109,7 @@ const Projects = (props: IProps) => {
                 backgroundColor: data?.mobileBtnBg,
               }}
               type="button"
+              onClick={handleNext}
             >
               Next Project
               {' '}
