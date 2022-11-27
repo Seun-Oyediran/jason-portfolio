@@ -46,7 +46,13 @@ export const projectsObject = {
     client: 'PAP Inc. (UK)',
     date: 'October ‘22',
     link: '',
+    mobileTitle: 'PAP Admin',
+    mobileBtnBorder: '#FFFFFF',
+    mobileBtnText: '#FFFFFF',
+    mobileBtnBg: 'transparent',
+    footerBorder: '',
   },
+
   rptrd: {
     bg: '#F5F5F5',
     firstLetter: 'R',
@@ -68,7 +74,13 @@ export const projectsObject = {
     client: 'RPTRD (UK)',
     date: 'October ‘22',
     link: 'https://www.rptrdsols.io/',
+    mobileTitle: 'RPTRD',
+    mobileBtnBorder: '#000000',
+    mobileBtnText: '#FFFFFF',
+    mobileBtnBg: '#000000',
+    footerBorder: 'rgba(27, 28, 30, 0.5)',
   },
+
   tenaciti: {
     bg: '#3366CC',
     firstLetter: 'T',
@@ -90,6 +102,11 @@ export const projectsObject = {
     client: 'Waves Tech (US)',
     date: 'October ‘22',
     link: '',
+    mobileTitle: 'TENACITI',
+    mobileBtnBorder: '#FFFFFF',
+    mobileBtnText: '#1B1C1E',
+    mobileBtnBg: '#ffffff',
+    footerBorder: '',
   },
 };
 

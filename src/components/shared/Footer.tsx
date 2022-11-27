@@ -17,6 +17,7 @@ interface IProps {
   project?: boolean;
   link?: string;
   leftText?: string;
+  borderColor?: string;
 }
 
 interface IProjectDetails {
@@ -48,6 +49,7 @@ const Footer = (props: IProps) => {
     project = false,
     link,
     leftText = DEFAULT_TEXT,
+    borderColor,
   } = props;
   const { data } = queries.read();
 
@@ -134,7 +136,7 @@ const Footer = (props: IProps) => {
         </div>
       </div>
       <div className="d-block d-md-none">
-        <MobileFooter className={className} color={color} />
+        <MobileFooter className={className} color={color} borderColor={borderColor} />
       </div>
     </Fragment>
   );

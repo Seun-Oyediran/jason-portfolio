@@ -5,15 +5,16 @@ import { Spotify } from '../../../svg';
 interface IProps {
   className?: string;
   color?: string;
+  borderColor?: string;
 }
 
 const Footer = (props: IProps) => {
-  const { className = '', color = '#fff' } = props;
+  const { className = '', color = '#fff', borderColor } = props;
   const { data } = queries.read();
 
   return (
     <div className={`app_footer_con mobile ${className}`}>
-      <div className="bottom px-3">
+      <div className="bottom px-3" style={{ borderTopColor: borderColor }}>
         <div className="d-flex gap-2 spotify align-items-center">
           <Spotify />
           <p style={{ color }}>
@@ -25,7 +26,7 @@ const Footer = (props: IProps) => {
         </div>
       </div>
 
-      <div className="bottom px-3">
+      <div className="bottom px-3" style={{ borderTopColor: borderColor }}>
         <div className="d-flex justify-content-between">
           <div className="d-flex gap-1">
             <a style={{ color }} target="_blank" href="mailto:Jeriahudi@gmail.com" rel="noreferrer">

@@ -7,10 +7,13 @@ interface IProps {
   className?: string;
   color?: string;
   secondaryColor?: string;
+  borderColor?: string;
 }
 
 const Header = (props: IProps) => {
-  const { className = '', color = '#fff', secondaryColor = '#fff' } = props;
+  const {
+    className = '', color = '#fff', secondaryColor = '#fff', borderColor,
+  } = props;
 
   return (
     <Fragment>
@@ -55,7 +58,12 @@ const Header = (props: IProps) => {
         </div>
       </div>
       <div className="d-block d-md-none">
-        <MobileHeader className={className} color={color} secondaryColor={secondaryColor} />
+        <MobileHeader
+          className={className}
+          color={color}
+          secondaryColor={secondaryColor}
+          borderColor={borderColor}
+        />
       </div>
     </Fragment>
   );

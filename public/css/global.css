@@ -622,3 +622,40 @@ p {
 .bordered_footer_item {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+.app_projects_mobile_layout .title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+  letter-spacing: -0.1em;
+}
+
+.app_projects_mobile_layout .flex_con {
+  flex: 1;
+  min-width: 100px;
+}
+
+.app_projects_mobile_layout .project_details h4,
+.app_projects_mobile_layout .project_details p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.app_projects_mobile_layout .project_details a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.app_projects_mobile_layout .action_buttons button {
+  all: unset;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 8px 16px;
+  border: 1px solid #ffffff;
+  border-radius: 43px;
+}

@@ -67,6 +67,7 @@ const About = () => {
                     <motion.div
                       initial={{ x: '100%', opacity: 0.4 }}
                       animate={{ x: '0', opacity: 1 }}
+                      transition={{ type: 'tween' }}
                       className="img-con my-3"
                       key={item.id}
                     >
