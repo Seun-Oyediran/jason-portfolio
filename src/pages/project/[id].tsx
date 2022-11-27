@@ -74,6 +74,8 @@ const Project = () => {
       const data: IData | undefined = projectsObject[id];
       if (data) {
         setPageData(data);
+      } else {
+        router.push('/404');
       }
     }
   }, [id]);
