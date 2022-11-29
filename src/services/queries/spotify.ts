@@ -55,8 +55,10 @@ const read = (options = {}) => {
   const response = useQuery([spotify.read], getData, {
     ...options,
     onSuccess: () => {},
-    onError: () => {
-      getAccessToken();
+    onError: (error: any) => {
+      if (error?.response?.status < 500) {
+        getAccessToken();
+      }
     },
     refetchInterval: 5000,
   });
