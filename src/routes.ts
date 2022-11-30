@@ -9,6 +9,10 @@ const routes = {
   project: {
     path: '/project',
   },
+
+  workshop: {
+    path: '/workshop',
+  },
 };
 
 export default routes;
