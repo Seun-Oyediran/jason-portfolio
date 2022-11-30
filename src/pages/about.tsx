@@ -52,9 +52,20 @@ const About = () => {
 
             <div className="about_page_second_content align-self-center mt-5">
               <h6>Migwo</h6>
-              <p className="mt-3">
+              <p className="mt-3 d-none d-md-block">
                 That means uh, Good morning, you’ve seen my choice in music, other stuff I’m
                 interested in Include..
+              </p>
+
+              <p className="mt-3 d-md-none">
+                That means uh, Good morning,
+                {' '}
+                <br />
+                {' '}
+                you’ve seen my choice in music,
+                <br />
+                {' '}
+                other stuff I’m interested in Include..
               </p>
             </div>
 
