@@ -593,7 +593,8 @@ p {
   transition: all 0.3s ease;
 }
 
-.app_home_button_con.active h2 {
+.app_home_button_con.active h2,
+.app_home_button_con.active h6 {
   color: #f7f7f7;
 }
 
@@ -676,4 +677,86 @@ p {
 
 .about_footer_item.dark p {
   color: #1b1c1e !important;
+}
+
+.app__works__tab .title h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+  letter-spacing: -0.1em;
+  color: #f7f7f7;
+}
+
+.app__works__tab .title h6 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.1em;
+  color: #f7f7f7;
+}
+
+.app__works__selected__works .indicator {
+  width: 4px;
+  height: 4px;
+  background: #4bfe0c;
+}
+
+.app__works__selected__works p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f7f7f7;
+}
+
+.app__works__selected__works .scroll__down {
+  max-width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app__works__content .project__count h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: -0.1em;
+  color: #f7f7f7;
+}
+
+.app__works__content .project__count p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f7f7f7;
+}
+
+.app__mobile__project__card h4,
+.app__mobile__project__card a {
+  text-decoration: none;
+}
+
+.app__mobile__project__card h4 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.app__mobile__project__card .img-con {
+  max-width: 165px;
+}
+
+.app__works__btn__con button {
+  all: unset;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 43px;
+  padding: 4px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.app__home__button__link {
+  text-decoration: none;
 }
