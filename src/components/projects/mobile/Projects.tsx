@@ -87,7 +87,6 @@ const Projects = (props: IProps) => {
               width={400}
               height={200}
             />
-            <img src={item} alt={data?.mobileTitle} className="w-100" loading="lazy" />
           </div>
         ))}
       </div>
