@@ -760,3 +760,61 @@ p {
 .app__home__button__link {
   text-decoration: none;
 }
+
+.app__loader__con {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #080808;
+  z-index: 9999;
+  animation-name: exit;
+  animation-duration: 5s;
+  overflow: hidden;
+  right: 100vw;
+  opacity: 0;
+}
+
+.app__loader__con .loader {
+  max-width: 320px;
+  height: 4px;
+  width: 100%;
+  background-color: #ffffff;
+  animation-name: maxWidth;
+  animation-duration: 5s;
+}
+
+.app__loader__con p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
+@keyframes maxWidth {
+  0% {
+    max-width: 8px;
+  }
+
+  100% {
+    width: 320px;
+  }
+}
+
+@keyframes exit {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+
+  80% {
+    right: 0;
+    opacity: 1;
+  }
+
+  100% {
+    right: 100vw;
+    opacity: 0;
+  }
+}

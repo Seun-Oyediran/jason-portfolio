@@ -162,11 +162,9 @@ const Home = () => {
               <div className="d-flex align-items-center gap-1">
                 <div className="indicator" />
                 <p>
-                  SELECTED WORKS FROM
-                  {' '}
+                  THINGS I DABBLED IN
                   <br />
                   THE YEAR 2022.
-                  {' '}
                 </p>
               </div>
 
@@ -188,18 +186,18 @@ const Home = () => {
                 <div className="d-flex flex-column gap-4">
                   <MobileProjectCard
                     number="01"
-                    img="/img/mobile_project_1.svg"
-                    href="/project/pap"
+                    img="/img/mobile_workshop_1.svg"
+                    href="/workshop/apple"
                   />
                   <MobileProjectCard
                     number="02"
-                    img="/img/mobile_project_2.png"
-                    href="/project/rptrd"
+                    img="/img/mobile_workshop_2.svg"
+                    href="/workshop/windows"
                   />
                   <MobileProjectCard
                     number="03"
-                    img="/img/mobile_project_3.png"
-                    href="/project/tenaciti"
+                    img="/img/mobile_workshop_4.png"
+                    href="/workshop/rptrd"
                   />
                 </div>
               </div>

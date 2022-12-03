@@ -60,6 +60,17 @@
     font-size: 20px;
     line-height: 22px;
   }
+
+  .app__loader__con p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #f7f7f7;
+  }
+
+  .app__loader__con .loader {
+    height: 4px;
+  }
 }
 
 /* col-sm */
