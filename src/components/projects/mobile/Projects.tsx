@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 import routes from '../../../routes';
@@ -78,7 +79,15 @@ const Projects = (props: IProps) => {
       <div className="img-container mt-5 pt-4">
         {data?.images.map((item, index) => (
           <div className="my-3" key={index}>
-            <img src={item} alt={data?.mobileTitle} className="w-100" />
+            <Image
+              src={item}
+              className="w-100"
+              loading="lazy"
+              alt={data?.mobileTitle}
+              width={400}
+              height={200}
+            />
+            <img src={item} alt={data?.mobileTitle} className="w-100" loading="lazy" />
           </div>
         ))}
       </div>

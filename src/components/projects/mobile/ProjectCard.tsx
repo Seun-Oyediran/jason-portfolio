@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface IProps {
   href: string;
   number?: string;
-  img?: string;
+  img: string;
 }
 
 const ProjectCard = (props: IProps) => {
@@ -17,7 +18,14 @@ const ProjectCard = (props: IProps) => {
           <div className=" d-flex gap-2">
             <h4>{number}</h4>
             <div className="img-con">
-              <img src={img} alt="project" className="w-100" />
+              <Image
+                src={img}
+                className="w-100"
+                loading="lazy"
+                alt="project"
+                width={165}
+                height={165}
+              />
             </div>
           </div>
         </a>
