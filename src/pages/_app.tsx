@@ -7,6 +7,7 @@ import '../../public/css/font.css';
 import '../../public/css/typography.css';
 import '../../public/css/global.css';
 import '../../public/css/responsive.css';
+import { Loader } from '../components';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,7 +31,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
+      <div>
+        <Loader />
+        <Component {...pageProps} />
+      </div>
     </QueryClientProvider>
   );
 }
