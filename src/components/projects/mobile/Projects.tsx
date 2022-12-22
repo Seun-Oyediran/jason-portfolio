@@ -82,10 +82,12 @@ const Projects = (props: IProps) => {
             <Image
               src={item}
               className="w-100"
+              style={{ flex: 1 }}
               loading="lazy"
               alt={data?.mobileTitle}
               width={400}
               height={200}
+              layout="responsive"
             />
           </div>
         ))}
