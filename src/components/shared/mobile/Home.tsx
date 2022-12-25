@@ -66,11 +66,11 @@ const Home = () => {
 
           <div className="mt-4">
             <div className="px-3">
-              <FooterItem text="An Interface designer with a love for anime, and working remotely. Cofounder of Huslow Tech. Available Nov. 2022" />
+              <FooterItem text="I am an interface designer with a love for anime, music and creating new designs from scratch. I work remotely by myself but I am comfortable working with a team. I am a Co-founder of Huslow Tech and readily available to create designs that showcase your identity." />
             </div>
 
             <div className="px-3 footer_item_border_top">
-              <FooterItem text="Should have been a website with loads of animations, Showcasing mostly the devs skills, buttt. the budget didn’t so you get this. " />
+              <FooterItem text="This should be website showcasing different ranges of designs, animation, and styles and techniques. For now however, you will get a glimpse of my works and me only." />
             </div>
           </div>
         </div>
