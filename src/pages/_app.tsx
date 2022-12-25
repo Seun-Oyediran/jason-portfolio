@@ -40,7 +40,15 @@ function MyApp({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <div>
         <Head>
+          <title>Jason Udi | independent interface designer</title>
+
+          <link rel="canonical" href="https://jasonudi.com/" />
+
+          <meta charSet="UTF-8" />
+
           <meta name="title" content="Jason Udi | independent interface designer." />
+
+          <meta name="description" content="Jason Udi | independent interface designer." />
 
           <meta itemProp="name" content="" />
 
