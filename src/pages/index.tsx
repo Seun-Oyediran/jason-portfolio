@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  Fragment, useEffect, useRef, useState,
+} from 'react';
 import type { NextPage } from 'next';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
 import {
-  Footer, Header, ProjectCard, TimeButton,
+  Footer, Header, MetaData, ProjectCard, TimeButton,
 } from '../components';
 import { projects, workshop } from '../utils';
 import { MobileHome } from '../components/shared/mobile';
@@ -66,59 +68,63 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <SafeHydrate>
-      <div className="d-none d-md-block">
-        <div ref={triggerRef} className="app_home_page">
-          <div>
-            <Header />
-            <div className="d-flex justify-content-center">
-              <TimeButton />
-            </div>
-          </div>
-          <div className="">
-            <div className="d-flex">
-              <div ref={boxRef} className="app_projects_con d-flex gap-3 align-items-center">
-                <h3 className={active === 'projects' ? 'big' : ''}>
-                  Projects (
-                  {projects.length}
-                  )
-                </h3>
+    <Fragment>
+      <MetaData />
 
-                {projects.map((item) => (
-                  <Link key={item.id} href={`/project/${item.name}`}>
-                    <a href={`/project/${item.name}`}>
-                      <ProjectCard img={item.image} layoutId={`project_layout_${item.name}`} />
-                    </a>
-                  </Link>
-                ))}
-
-                <h3 className={active === 'workshop' ? 'big' : ''} ref={workshopRef}>
-                  Workshop (
-                  {workshop.length}
-                  )
-                </h3>
-                {workshop.map((item) => (
-                  <Link key={item.id} href={`/workshop/${item.name}`}>
-                    <a href={`/workshop/${item.name}`}>
-                      <ProjectCard img={item.image} layoutId={`project_workshop_${item.name}`} />
-                    </a>
-                  </Link>
-                ))}
+      <SafeHydrate>
+        <div className="d-none d-md-block">
+          <div ref={triggerRef} className="app_home_page">
+            <div>
+              <Header />
+              <div className="d-flex justify-content-center">
+                <TimeButton />
               </div>
             </div>
-          </div>
+            <div className="">
+              <div className="d-flex">
+                <div ref={boxRef} className="app_projects_con d-flex gap-3 align-items-center">
+                  <h3 className={active === 'projects' ? 'big' : ''}>
+                    Projects (
+                    {projects.length}
+                    )
+                  </h3>
 
-          <div>
-            <Footer />
+                  {projects.map((item) => (
+                    <Link key={item.id} href={`/project/${item.name}`}>
+                      <a href={`/project/${item.name}`}>
+                        <ProjectCard img={item.image} layoutId={`project_layout_${item.name}`} />
+                      </a>
+                    </Link>
+                  ))}
+
+                  <h3 className={active === 'workshop' ? 'big' : ''} ref={workshopRef}>
+                    Workshop (
+                    {workshop.length}
+                    )
+                  </h3>
+                  {workshop.map((item) => (
+                    <Link key={item.id} href={`/workshop/${item.name}`}>
+                      <a href={`/workshop/${item.name}`}>
+                        <ProjectCard img={item.image} layoutId={`project_workshop_${item.name}`} />
+                      </a>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <Footer />
+            </div>
+            {/* <WelcomeScreen /> */}
           </div>
-          {/* <WelcomeScreen /> */}
         </div>
-      </div>
 
-      <div className="d-md-none">
-        <MobileHome />
-      </div>
-    </SafeHydrate>
+        <div className="d-md-none">
+          <MobileHome />
+        </div>
+      </SafeHydrate>
+    </Fragment>
   );
 };
 
