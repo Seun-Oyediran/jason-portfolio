@@ -20,9 +20,9 @@ export const projects = [
 export const workshop = [
   { id: 1, name: 'apple', image: '/img/workshop_1.png' },
   { id: 2, name: 'windows', image: '/img/workshop_2.png' },
-  { id: 3, name: 'rptrd', image: '/img/workshop_3.png' },
+  // { id: 3, name: 'rptrd', image: '/img/workshop_3.png' },
   { id: 4, name: 'rptrd', image: '/img/workshop_4.png' },
-  { id: 5, name: 'five', image: '/img/workshop_5.png' },
+  // { id: 5, name: 'five', image: '/img/workshop_5.png' },
 ];
 
 export const projectsObject = {

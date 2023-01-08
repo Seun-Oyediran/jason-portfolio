@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           x: window.innerWidth - window.innerWidth / 2,
         },
         {
-          x: -element.clientWidth + 30,
+          x: -element.clientWidth + 300,
           scrollTrigger: {
             trigger: triggerRef.current,
             start: 'top top',

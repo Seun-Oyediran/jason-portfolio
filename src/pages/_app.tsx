@@ -8,7 +8,7 @@ import '../../public/css/typography.css';
 import '../../public/css/global.css';
 import '../../public/css/responsive.css';
 
-import { Loader } from '../components';
+import { Loader, MetaData } from '../components';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <div>
+        <MetaData />
         <Loader />
         <Component {...pageProps} />
       </div>

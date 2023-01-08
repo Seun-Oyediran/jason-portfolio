@@ -47,7 +47,7 @@ const Header = (props: IProps) => {
                   </a>
                 </Link>
               </div>
-              <p className="p mt-3" style={{ color: secondaryColor }}>
+              <p className="p mt-3" style={{ color: secondaryColor, textAlign: 'right' }}>
                 developed by
                 {' '}
                 <br />
